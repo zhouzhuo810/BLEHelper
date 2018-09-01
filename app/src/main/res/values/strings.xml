@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BLE蓝牙串口调试</string>
+    <string name="search_result">BLE蓝牙搜索</string>
+    <string name="connected">已连接</string>
+    <string name="disconnect">断开</string>
+    <string name="enter">服务</string>
+    <string name="connect">连接</string>
+</resources>

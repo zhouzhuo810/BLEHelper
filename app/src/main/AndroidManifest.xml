@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.zhouzhuo810.blehelperdemo">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.act.MainActivity"
+            android:configChanges="screenSize|screenLayout|smallestScreenSize|fontScale|density|touchscreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.act.BLEListActivity"
+            android:configChanges="screenSize|screenLayout|smallestScreenSize|fontScale|density|touchscreen"
+            android:screenOrientation="portrait" />
+
+        <!--设计图的宽,单位是像素,推荐用markman测量,量出来如果是750px那么请尽量去找ui设计师要一份android的设计图.-->
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <!--设计图对应的标准dpi,根据下面的那张图找到对应的dpi,比如1080就对应480dpi,如果拿到的是其他宽度的设计图,那么选择一个相近的dpi就好了-->
+        <!--
+            宽         	    240 	320 	480 	720     1080 	1440
+            DPI等级	        LDPI	MDPI	HDPI	XHDPI	XXHDPI	XXXHDPI
+            DPI数值	        120	    160	    240	    320	    480	    640
+        -->
+        <meta-data
+            android:name="design_dpi"
+            android:value="480" />
+
+        <!--全局字体的大小倍数,有时候老板会觉得你的所有的字小了或者大了,你总不能一个一个去改吧-->
+        <meta-data
+            android:name="font_size"
+            android:value="1.0" />
+
+        <!--你的布局里面用的是px这就写px,你的布局里面用的是dp这就写dp,要统一,不要一会儿px一会儿dp,字体也用px或者dp,不要用sp,微信qq用的肯定不是sp.-->
+        <meta-data
+            android:name="unit"
+            android:value="px" />
+    </application>
+</manifest>

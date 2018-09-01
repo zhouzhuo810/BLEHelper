@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <me.zhouzhuo810.magpie.ui.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_title_height"
+        android:background="@color/colorPrimary"
+        android:elevation="2dp"
+        app:ttb_leftImg="@mipmap/ic_launcher_round"
+        app:ttb_rightImg="@drawable/ic_more_horiz_white_24dp"
+        app:ttb_showLeftImg="true"
+        app:ttb_showLeftLayout="true"
+        app:ttb_showLeftMarkView="false"
+        app:ttb_showLeftText="false"
+        app:ttb_showRightImg="true"
+        app:ttb_showRightLayout="false"
+        app:ttb_showRightMarkView="false"
+        app:ttb_showRightText="false"
+        app:ttb_textSizeTitle="@dimen/base_title_text_size"
+        app:ttb_titleGravity="left"
+        app:ttb_titleText="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/base_title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="40px"
+        android:paddingRight="40px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="蓝牙开关"
+            android:textColor="#333"
+            android:textSize="@dimen/base_title_text_size" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/sw_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="蓝牙关"
+            android:textOn="蓝牙开" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20px"
+        android:minHeight="@dimen/base_title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="40px"
+        android:paddingRight="40px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GPS"
+            android:textColor="#333"
+            android:textSize="@dimen/base_title_text_size" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/sw_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20px"
+        android:minHeight="@dimen/base_title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="40px"
+        android:paddingRight="40px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="精准定位"
+            android:textColor="#333"
+            android:textSize="@dimen/base_title_text_size" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/sw_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/btn_selector"
+        android:gravity="center"
+        android:text="开始搜索"
+        android:textColor="@color/colorWhite"
+        android:textSize="40px" />
+</LinearLayout>
